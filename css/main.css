@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0 0 0 0;
   padding: 0 0 0 0;
@@ -15,6 +16,10 @@
 .container {
   max-width: 1520px;
   width: 96%;
+  margin: 0 auto; }
+
+.container2 {
+  max-width: 1140px;
   margin: 0 auto; }
 
 .menu__company {
@@ -82,7 +87,6 @@
 .logo__subtitle {
   margin: 0 0 0 0;
   padding: 0 0 0 0;
-  width: 640px;
   height: 32px;
   color: #999999;
   font-family: "Arial";
@@ -100,14 +104,6 @@
   align-items: center; }
   .tel__icon {
     color: #000; }
-  .tel__number {
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
-    color: #000;
-    font-family: "PT Sans", sans-serif;
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 17px; }
   .tel__btn {
     margin: 0 10px 0 15px;
     padding: 0 0 0 0;
@@ -123,6 +119,19 @@
     font-weight: 400; }
     .tel__btn:hover {
       opacity: 0.8; }
+  .tel__link {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    color: #000;
+    font-family: "PT Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 17px;
+    text-decoration: none; }
+    .tel__link:hover {
+      text-decoration: none;
+      cursor: pointer;
+      opacity: 0.7; }
 
 .service__menu {
   margin: 0 0 0 0;
@@ -237,7 +246,7 @@
   padding: 0 0 0 0;
   box-sizing: border-box;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center; }
 
 .advantage__bullets-left {
@@ -286,6 +295,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   font-family: "Arial";
   font-size: 30px;
   font-weight: 600;
@@ -295,6 +305,27 @@
     color: #000; }
   .section__title_white {
     color: #fff; }
+  .section__title_margin {
+    margin-bottom: 30px; }
+.section__subtitle {
+  font-family: "PT Sans", sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 24px; }
+  .section__subtitle_white {
+    color: #fff; }
+.section__text {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  color: #000;
+  font-family: "PT Sans", sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 22px; }
+
+.subtitle_margin {
+  margin-top: 13px;
+  margin-bottom: 32px; }
 
 .form-plate__request {
   margin: 0 0 0 0;
@@ -319,6 +350,8 @@
   justify-content: center;
   align-items: center;
   justify-content: space-evenly; }
+.form-plate_margin {
+  margin-bottom: 80px; }
 
 .input {
   margin: 0 0 0 0;
@@ -344,5 +377,296 @@
   font-family: "Arial";
   font-weight: 600; }
   .button:hover {
-    background-color: #ffcc4a;
+    background-color: #e0a101;
     cursor: pointer; }
+
+.services-items {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between; }
+
+.services-items_margin {
+  margin-bottom: 75px; }
+
+.services-item {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.services__img_margin {
+  margin-bottom: 13px; }
+
+.services__btn {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  width: 195px;
+  height: 35px;
+  background-color: #0076d5;
+  border-radius: 15px;
+  color: #fff;
+  font-family: "PT Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  outline: none; }
+  .services__btn:hover {
+    cursor: pointer;
+    opacity: 0.8; }
+
+.terms {
+  margin: 0 auto;
+  padding: 0 0 0 0; }
+  .terms_margin {
+    margin-bottom: 55px; }
+
+.form-search {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  box-sizing: border-box; }
+
+.form-search_margin {
+  margin-bottom: 70px;
+  border: 1px solid #d5ecff; }
+
+.form-search__plate {
+  padding: 32px 0 0 0;
+  box-sizing: border-box;
+  background-color: #d5ecff; }
+
+.form-search__subtitle {
+  color: #000;
+  font-family: "PT Sans", sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center; }
+  .form-search__subtitle_margin {
+    margin-top: 14px;
+    margin-bottom: 65px; }
+
+.form__items {
+  padding: 0 0 0 0;
+  display: flex;
+  justify-content: space-evenly; }
+  .form__items_margin {
+    margin-top: 35px;
+    margin-bottom: 45px; }
+
+.form__item {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  display: flex;
+  flex-direction: column; }
+
+.form-question__form {
+  margin-bottom: 50px; }
+
+.select {
+  margin: 0 0 0 0;
+  padding: 5px;
+  width: 275px;
+  height: 45px;
+  border-radius: 20px;
+  border: none;
+  background-color: #fff;
+  box-shadow: 5px 5px 15px -12px #000000 inset;
+  font-size: 16px;
+  color: #000;
+  outline: none; }
+
+.before_1 {
+  position: relative; }
+  .before_1::before {
+    content: 'Вид техники';
+    position: absolute;
+    top: -25px;
+    left: 80px;
+    color: #000;
+    font-family: "Arial";
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 18px; }
+
+.before_2 {
+  position: relative; }
+  .before_2::before {
+    content: 'Вид неисправности';
+    position: absolute;
+    top: -25px;
+    left: 56px;
+    color: #000;
+    font-family: "Arial";
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 18px; }
+
+.before_3 {
+  position: relative; }
+  .before_3::before {
+    content: 'Стоимость услуги составит';
+    position: absolute;
+    top: -25px;
+    left: 17px;
+    color: #000;
+    font-family: "Arial";
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 18px; }
+
+.input_margin {
+  margin-bottom: 20px; }
+
+.input_margin-lr {
+  margin: 0 20px; }
+
+.reviews__slider {
+  margin: 0 0 30px 0;
+  padding: 0 0 0 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+.reviews__arrow {
+  box-sizing: border-box;
+  width: 45px;
+  height: 45px;
+  background-color: #0076d5;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .reviews__arrow_img {
+    width: 10px; }
+.reviews__item {
+  margin: 0 0 0 0;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 270px;
+  height: 320px;
+  border: 4px solid #d4d4d4;
+  border-radius: 5px; }
+.reviews__item-name {
+  color: #000;
+  font-family: "PT Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px; }
+.reviews__item-stars {
+  margin-bottom: 8px;
+  color: #fe8f00;
+  font-size: 25px; }
+.reviews__item-text {
+  color: #000;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px; }
+
+.button-reviews {
+  width: 220px;
+  height: 45px;
+  background-color: #0076d5;
+  color: #fff;
+  font-family: "Arial";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+  border-radius: 20px;
+  outline: none; }
+  .button-reviews:hover {
+    cursor: pointer;
+    opacity: 0.8; }
+
+.button__reviews_margin {
+  margin: 0 0 55px 0;
+  display: flex;
+  justify-content: center;
+  align-content: center; }
+
+.form-question {
+  margin: 0 0 0 0;
+  padding: 0 0 40px 0; }
+
+.form-question__plate {
+  background-color: #0076d5;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .form-question__plate_margin {
+    padding-top: 38px;
+    margin-bottom: 14px; }
+
+.about_margin {
+  margin-bottom: 64px; }
+
+.footer {
+  margin: 0 0 0 0;
+  padding: 0 0 0;
+  box-sizing: border-box;
+  background-color: #434955;
+  height: 350px; }
+  .footer__items {
+    display: flex;
+    justify-content: space-evenly; }
+  .footer__item {
+    min-width: 250px;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    box-sizing: border-box; }
+  .footer__desc {
+    width: 350px;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    box-sizing: border-box;
+    color: #fff; }
+  .footer__title {
+    color: #fff;
+    font-family: "Arial";
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 23px;
+    text-transform: uppercase;
+    text-decoration: none; }
+  .footer_padding {
+    padding-top: 50px; }
+
+.footer__list {
+  list-style-type: none; }
+
+.footer__menu_item {
+  padding: 0 0 0 0;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px; }
+
+.footer__menu_link {
+  text-decoration: none; }
+  .footer__menu_link:hover {
+    cursor: pointer;
+    opacity: 0.7; }
+
+.text_uppercase {
+  text-transform: uppercase; }
+
+.text_grey {
+  color: #999999; }
+
+.text_white {
+  color: #fff; }
+
+.text_margin_1 {
+  margin-bottom: 20px; }
+
+.text_margin_2 {
+  margin-bottom: 10px; }
+
+.text_margin_3 {
+  margin-bottom: 8px; }

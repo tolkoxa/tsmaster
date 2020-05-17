@@ -22,6 +22,11 @@
     margin: 0 auto;
 }
 
+.container2 {
+    max-width: $container2__width;
+    margin: 0 auto;
+}
+
 .menu__company {
     margin: 0 0 0 0;
     padding: 0 0 0 0;
@@ -99,7 +104,7 @@
 .logo__subtitle {
     margin: 0 0 0 0;
     padding: 0 0 0 0;
-    width: 640px;
+    // width: 640px;
     height: 32px;
     color: $text__subtitle_color;
     font-family: $font__second;
@@ -119,15 +124,7 @@
     &__icon {
         color: $text__main_color;
     }
-    &__number {
-        margin: 0 0 0 0;
-        padding: 0 0 0 0;
-        color: $text__main_color;
-        font-family: $font__first;
-        font-size: 17px;
-        font-weight: 700;
-        line-height: 17px;
-    }
+    &__number {}
     &__btn {
         margin: 0 10px 0 15px;
         padding: 0 0 0 0;
@@ -143,6 +140,21 @@
         font-weight: 400;
         &:hover {
             opacity: 0.8;
+        }
+    }
+    &__link {
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        color: $text__main_color;
+        font-family: $font__first;
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 17px;
+        text-decoration: none;
+        &:hover {
+            text-decoration: none;
+            cursor: pointer;
+            opacity: 0.7;
         }
     }
 }
@@ -287,7 +299,7 @@
     padding: 0 0 0 0;
     box-sizing: border-box;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -345,6 +357,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        text-align: center;
         font-family: $font__second;
         font-size: 30px;
         font-weight: 600;
@@ -356,12 +369,33 @@
         &_white {
             color: $text__second_color;
         }
+        &_margin {
+            margin-bottom: 30px;
+        }
     }
-    // .section__subtitle
     &__subtitle {
-        // .section__subtitle_white
-        &_white {}
+        font-family: $font__first;
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 24px;
+        &_white {
+            color: $text__second_color;
+        }
     }
+    &__text {
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        color: $text__main_color;
+        font-family: $font__first;
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 22px;
+    }
+}
+
+.subtitle_margin {
+    margin-top: 13px;
+    margin-bottom: 32px;
 }
 
 .form-plate {
@@ -389,6 +423,9 @@
         justify-content: center;
         align-items: center;
         justify-content: space-evenly;
+    }
+    &_margin {
+        margin-bottom: 80px;
     }
 }
 
@@ -422,102 +459,363 @@
     }
 }
 
-.request {}
-
-.form {
-    // .form__title
-    &__title {
-        // .form__title_white
-        &_white {}
-    }
-    // .form__items
-    &__items {}
-    // .form__option
-    &__option {}
+.services-items {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
 }
 
-.services-style {}
+.services-items_margin {
+    margin-bottom: 75px;
+}
 
-.services-items {}
+.services-item {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-.service-item {}
+.services__img_margin {
+    margin-bottom: 13px;
+}
+
+.services__btn {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    width: 195px;
+    height: 35px;
+    background-color: $bgcolor_blue;
+    border-radius: 15px;
+    color: $text__second_color;
+    font-family: $font__first;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    outline: none;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+        // color: $text__main_color;
+    }
+}
 
 .terms {
-    // .terms__text
-    &__text {}
+    margin: 0 auto;
+    padding: 0 0 0 0;
+    &_margin {
+        margin-bottom: 55px;
+    }
 }
 
 .form-search {
-    // .form-search__text
-    &__text {}
-    // .form-search__subtitle
-    &__subtitle {}
-    // .form-search__items
-    &__items {}
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    box-sizing: border-box;
 }
 
-.form-serach {
-    // .form-serach__plate
-    &__plate {}
+.form-search_margin {
+    margin-bottom: 70px;
+    border: 1px solid $bg-form__plate_color;
 }
 
-.select {}
+.form-search__plate {
+    // margin: 0 0 0 0;
+    padding: 32px 0 0 0;
+    box-sizing: border-box;
+    background-color: $bg-form__plate_color;
+}
+
+.form-search__subtitle {
+    color: $text__main_color;
+    font-family: $font__first;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    &_margin {
+        margin-top: 14px;
+        margin-bottom: 65px;
+    }
+}
+
+.form-search__items {}
+
+.form__items {
+    padding: 0 0 0 0;
+    display: flex;
+    justify-content: space-evenly;
+    &_margin {
+        margin-top: 35px;
+        margin-bottom: 45px;
+    }
+}
+
+.form__item {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-question__form {
+    margin-bottom: 50px;
+}
+
+.select {
+    margin: 0 0 0 0;
+    padding: 5px;
+    width: 275px;
+    height: 45px;
+    border-radius: 20px;
+    border: none;
+    background-color: $text__second_color;
+    box-shadow: 5px 5px 15px -12px #000000 inset;
+    font-size: 16px;
+    color: $text__main_color;
+    outline: none;
+}
+
+.before_1 {
+    position: relative;
+    &::before {
+        content: 'Вид техники';
+        position: absolute;
+        top: -25px;
+        left: 80px;
+        color: $text__main_color;
+        font-family: $font__second;
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 18px;
+    }
+}
+
+.before_2 {
+    position: relative;
+    &::before {
+        content: 'Вид неисправности';
+        position: absolute;
+        top: -25px;
+        left: 56px;
+        color: $text__main_color;
+        font-family: $font__second;
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 18px;
+    }
+}
+
+.before_3 {
+    position: relative;
+    &::before {
+        content: 'Стоимость услуги составит';
+        position: absolute;
+        top: -25px;
+        left: 17px;
+        color: $text__main_color;
+        font-family: $font__second;
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 18px;
+    }
+}
+
+.input_margin {
+    margin-bottom: 20px;
+}
+
+.input_margin-lr {
+    margin: 0 20px
+}
+
+.form__option {}
 
 .reviews {
     // .reviews__slider
-    &__slider {}
-    // .reviews__left-arrow
-    &__left-arrow {}
-    // .reviews__items
-    &__items {}
-    // .reviews__item
-    &__item {}
+    &__slider {
+        margin: 0 0 30px 0;
+        padding: 0 0 0 0;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    // .reviews__arrow
+    &__arrow {
+        box-sizing: border-box;
+        width: 45px;
+        height: 45px;
+        background-color: $bgcolor_blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &_img {
+            width: 10px;
+        }
+    }
+    &__item {
+        margin: 0 0 0 0;
+        padding: 10px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        width: 270px;
+        height: 320px;
+        border: 4px solid #d4d4d4;
+        border-radius: 5px;
+    }
     // .reviews__item-name
-    &__item-name {}
+    &__item-name {
+        color: $text__main_color;
+        font-family: $font__first;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 25px;
+    }
     // .reviews__item-stars
-    &__item-stars {}
+    &__item-stars {
+        margin-bottom: 8px;
+        color: $bg__stars_color;
+        font-size: 25px;
+    }
     // .reviews__item-text
-    &__item-text {}
+    &__item-text {
+        color: $text__main_color;
+        font-family: $font__first;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+}
+
+.button-reviews {
+    width: 220px;
+    height: 45px;
+    background-color: $bgcolor_blue;
+    color: $text__second_color;
+    font-family: $font__second;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+    border-radius: 20px;
+    outline: none;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
+}
+
+.button__reviews_margin {
+    margin: 0 0 55px 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 .form-question {
-    // .form-question__plate
-    &__plate {}
-    // .form-question__form
-    &__form {}
+    margin: 0 0 0 0;
+    padding: 0 0 40px 0;
 }
 
-.about {
-    // .about__text
-    &__text {}
+.form-question__plate {
+    background-color: $bgcolor_blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &_margin {
+        padding-top: 38px;
+        margin-bottom: 14px;
+    }
+}
+
+.about_margin {
+    margin-bottom: 64px;
 }
 
 .footer {
-    // .footer__items
-    &__items {}
-    // .footer__item
-    &__item {}
-    // .footer__title
-    &__title {}
-    // .footer__link
-    &__link {}
+    margin: 0 0 0 0;
+    padding: 0 0 0;
+    box-sizing: border-box;
+    background-color: $bg__footer_color;
+    height: 350px;
+    &__items {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    &__item {
+        min-width: 250px;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        box-sizing: border-box;
+    }
+    &__desc {
+        width: 350px;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        box-sizing: border-box;
+        color: $text__second_color;
+    }
+    &__title {
+        color: $text__second_color;
+        font-family: $font__second;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 23px;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    &_padding {
+        padding-top: 50px;
+    }
 }
 
-.footer-menu {
-    // .footer-menu__link
-    &__link {}
+.footer__list {
+    list-style-type: none;
 }
 
-.footer_company {
-    // .footer_company__item
-    &__item {}
+.footer__menu_item {
+    // margin: 0 0 20px 0;
+    padding: 0 0 0 0;
+    font-family: $font__first;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
 }
 
-.footer-city {
-    // .footer-city__items
-    &__items {}
-    // .footer-city__item
-    &__item {}
-    // .footer-city__link
-    &__link {}
+.footer__menu_link {
+    text-decoration: none;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
+}
+
+.text_uppercase {
+    text-transform: uppercase;
+}
+
+.text_grey {
+    color: $text__subtitle_color;
+}
+
+.text_white {
+    color: $text__second_color;
+}
+
+.text_margin_1 {
+    margin-bottom: 20px;
+}
+
+.text_margin_2 {
+    margin-bottom: 10px;
+}
+
+.text_margin_3 {
+    margin-bottom: 8px;
 }
