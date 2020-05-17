@@ -278,6 +278,86 @@
     &__item {}
 }
 
+
+/*Карусель*/
+
+.carousel {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel img {
+    margin: 0;
+    padding: 0;
+    width: 105.3%;
+    /*делаем этот элемент блочным, что бы убрать лишнее пространство вокргу картинок */
+    display: block;
+}
+
+.arrow {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 45%;
+    padding: 0;
+    background: #fff;
+    border-radius: 2px;
+    border: 1px solid #fff;
+    box-shadow: 3px 3px 5px #000;
+    font-size: 24px;
+    line-height: 24px;
+    color: #444;
+    display: block;
+}
+
+.arrow:focus {
+    outline: none;
+}
+
+.arrow:hover {
+    background: #ccc;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.arrow:active {
+    box-shadow: none;
+}
+
+.prev {
+    left: 3%;
+    z-index: 10;
+}
+
+.next {
+    right: 3%;
+    z-index: 10;
+}
+
+.gallery {
+    width: 100%;
+    overflow: hidden;
+}
+
+.gallery ul {
+    width: 9999px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: margin-left 1000ms;
+    /* удаляем пустое пространство между элементами li, у которых установлен inline-block */
+    font-size: 0;
+}
+
+.gallery li {
+    display: inline-block;
+    margin-right: 0.751%;
+}
+
+
+/*карусель*/
+
 .advantage_margin {
     margin-bottom: 86px;
 }

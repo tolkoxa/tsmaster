@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <!-- <link rel="stylesheet" href="scss/main.css"> -->
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@200;300;400;700&display=swap" rel="stylesheet">
     <title>ТехСервис Мастер</title>
 </head>
@@ -102,19 +103,31 @@
     <main class="main-style">
         <section class="slider">
             <div class="container">
-                <div class="slider__points slider__points_margin">
-                    <span class="slider__point slider__point_active"></span>
+                <div id="points" class="slider__points slider__points_margin">
+                    <a class="slider__point slider__point_active"></a>
                     <a class="slider__point"></a>
                     <a class="slider__point"></a>
                     <a class="slider__point"></a>
                     <a class="slider__point"></a>
                 </div>
                 <div class="slider__top slider__top_margin">
-                    <div class="slider__item">
+                    <!-- <div class="slider__item">
                         <img class="slider__img" src="img/top-slider/top-slider_01.jpg" alt="">
-                    </div>
+                    </div> -->
                     <div class="slider__item">
-
+                        <div id="carousel" class="carousel">
+                            <button class="arrow prev"><</button>
+                            <div class="gallery">
+                                <ul class="images">
+                                    <li><img src="./img/top-slider/top-slider_01.jpg"></li>
+                                    <li><img src="./img/top-slider/top-slider_01.jpg"></li>
+                                    <li><img src="./img/top-slider/top-slider_01.jpg"></li>
+                                    <li><img src="./img/top-slider/top-slider_01.jpg"></li>
+                                    <li><img src="./img/top-slider/top-slider_01.jpg"></li>
+                                </ul>
+                            </div>
+                            <button class="arrow next">></button>
+                        </div>
                     </div>
                     <div class="slider__item">
 
@@ -363,6 +376,7 @@
             </div>
         </footer>
     </main>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
