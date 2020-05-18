@@ -55,12 +55,16 @@
 }
 
 .menu__link {
+    color: $text__menu_color;
     text-decoration: none;
     &:hover {
         cursor: pointer;
         text-decoration: none;
         color: $logo__text_color;
     }
+    // &:visited {
+    //     // color: $text__menu_color;
+    // }
 }
 
 .logo-text-tel {
@@ -104,7 +108,6 @@
 .logo__subtitle {
     margin: 0 0 0 0;
     padding: 0 0 0 0;
-    // width: 640px;
     height: 32px;
     color: $text__subtitle_color;
     font-family: $font__second;
@@ -289,6 +292,86 @@
     }
     &__item {}
 }
+
+
+/*Карусель*/
+
+.carousel {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel img {
+    margin: 0;
+    padding: 0;
+    width: 105.3%;
+    /*делаем этот элемент блочным, что бы убрать лишнее пространство вокргу картинок */
+    display: block;
+}
+
+.arrow {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 45%;
+    padding: 0;
+    background: #fff;
+    border-radius: 2px;
+    border: 1px solid #fff;
+    box-shadow: 3px 3px 5px #000;
+    font-size: 24px;
+    line-height: 24px;
+    color: #444;
+    display: block;
+}
+
+.arrow:focus {
+    outline: none;
+}
+
+.arrow:hover {
+    background: #ccc;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.arrow:active {
+    box-shadow: none;
+}
+
+.prev {
+    left: 3%;
+    z-index: 10;
+}
+
+.next {
+    right: 3%;
+    z-index: 10;
+}
+
+.gallery {
+    width: 100%;
+    overflow: hidden;
+}
+
+.gallery ul {
+    width: 9999px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: margin-left 1000ms;
+    /* удаляем пустое пространство между элементами li, у которых установлен inline-block */
+    font-size: 0;
+}
+
+.gallery li {
+    display: inline-block;
+    margin-right: 0.751%;
+}
+
+
+/*карусель*/
 
 .advantage_margin {
     margin-bottom: 86px;
@@ -633,10 +716,13 @@
     margin: 0 20px
 }
 
-.form__option {}
+.reviews-arrow__link {
+    &:hover {
+        opacity: 0.8;
+    }
+}
 
 .reviews {
-    // .reviews__slider
     &__slider {
         margin: 0 0 30px 0;
         padding: 0 0 0 0;
@@ -645,7 +731,6 @@
         justify-content: space-between;
         align-items: center;
     }
-    // .reviews__arrow
     &__arrow {
         box-sizing: border-box;
         width: 45px;
@@ -670,7 +755,6 @@
         border: 4px solid #d4d4d4;
         border-radius: 5px;
     }
-    // .reviews__item-name
     &__item-name {
         color: $text__main_color;
         font-family: $font__first;
@@ -678,13 +762,11 @@
         font-weight: 700;
         line-height: 25px;
     }
-    // .reviews__item-stars
     &__item-stars {
         margin-bottom: 8px;
         color: $bg__stars_color;
         font-size: 25px;
     }
-    // .reviews__item-text
     &__item-text {
         color: $text__main_color;
         font-family: $font__first;
@@ -780,7 +862,6 @@
 }
 
 .footer__menu_item {
-    // margin: 0 0 20px 0;
     padding: 0 0 0 0;
     font-family: $font__first;
     font-size: 18px;
@@ -830,7 +911,6 @@
 }
 
 .dev-planb {
-    /* margin: 100px 0 0 0; */
     padding: 0 15px 0 0;
     font-family: 'Montserrat', sans-serif;
     font-size: 11px;

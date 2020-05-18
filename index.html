@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <!-- <link rel="stylesheet" href="scss/main.css"> -->
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@200;300;400;700&display=swap" rel="stylesheet">
     <title>ТехСервис Мастер</title>
 </head>
@@ -102,19 +103,31 @@
     <main class="main-style">
         <section class="slider">
             <div class="container">
-                <div class="slider__points slider__points_margin">
-                    <span class="slider__point slider__point_active"></span>
+                <div id="points" class="slider__points slider__points_margin">
+                    <a class="slider__point slider__point_active"></a>
                     <a class="slider__point"></a>
                     <a class="slider__point"></a>
                     <a class="slider__point"></a>
                     <a class="slider__point"></a>
                 </div>
                 <div class="slider__top slider__top_margin">
-                    <div class="slider__item">
+                    <!-- <div class="slider__item">
                         <img class="slider__img" src="img/top-slider/top-slider_01.jpg" alt="">
-                    </div>
+                    </div> -->
                     <div class="slider__item">
-
+                        <div id="carousel" class="carousel">
+                            <button class="arrow prev"><</button>
+                            <div class="gallery">
+                                <ul class="images">
+                                    <li><img src="./img/top-slider/top-slider_01.jpg"></li>
+                                    <li><img src="./img/top-slider/top-slider_01.jpg"></li>
+                                    <li><img src="./img/top-slider/top-slider_01.jpg"></li>
+                                    <li><img src="./img/top-slider/top-slider_01.jpg"></li>
+                                    <li><img src="./img/top-slider/top-slider_01.jpg"></li>
+                                </ul>
+                            </div>
+                            <button class="arrow next">></button>
+                        </div>
                     </div>
                     <div class="slider__item">
 
@@ -246,7 +259,7 @@
             <div class="container2">
                 <div class="section__title section__title_margin section__title_black">отзывы</div>
                 <div class="reviews__slider">
-                    <a href="#">
+                    <a class="reviews-arrow__link" href="#">
                         <div class="reviews__arrow">
                             <img class="reviews__arrow_img" src="img/reviews/reviews_left.png">
                         </div>
@@ -266,7 +279,7 @@
                         <div class="reviews__item-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                         <div class="reviews__item-text">Очень довольна качеством ремонта. До вас вызывала мастера из другой фирмы — не приехал. А вы откликнулись на мою просьбу помочь с ремонтом посудомоечной машинки в течение 10 минут. Мастер подъехал через час.</div>
                     </div>
-                    <a href="#">
+                    <a class="reviews-arrow__link" href="#">
                         <div class="reviews__arrow">
                             <img class="reviews__arrow_img" src="img/reviews/reviews_right.png">
                         </div>
@@ -304,81 +317,6 @@
                 </div>
             </div>
         </section>
-        <!-- <footer class="footer">
-            <div class="footer__items-all">
-                <div class="footer__item">
-                    <div class="logo-name">
-                        <div class="logo__title">
-                            <a class="logo__link" href="/"> ТехСервис Мастер
-                            </a>
-                        </div>
-                        <p class="logo__subtitle">ремонт бытовой техники в Екатеринбурге</p>
-                    </div>
-                    <div class="footer__desc">Описание....................................... ......................................................... ......................................................... ......................................................... .........................................................
-                    </div>
-                </div>
-                <div class="footer__item">
-                    <p class="footer__title">Ремонт</p>
-                    <ul class="footer__ul">
-                        <li class="footer__li">
-                            <a class="footer__link" href="#">Стиральная машина</a>
-                        </li>
-                        <li class="footer__li">
-                            <a class="footer__link" href="#">Посудомоечная машина</a>
-                        </li>
-                        <li class="footer__li">
-                            <a class="footer__link" href="#">Холодильник</a>
-                        </li>
-                        <li class="footer__li">
-                            <a class="footer__link" href="#">духовой шкаф</a>
-                        </li>
-                        <li class="footer__li">
-                            <a class="footer__link" href="#">варочная панель</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer__item">
-                    <ul class="footer-menu">
-                        <li class="footer_company__item">
-                            <a class="footer-menu__link" href="#">О компании</a>
-                        </li>
-                        <li class="footer_company__item">
-                            <a class="footer-menu__link" href="#">Преимущества</a>
-                        </li>
-                        <li class="footer_company__item">
-                            <a class="footer-menu__link" href="#">Услуги</a>
-                        </li>
-                        <li class="footer_company__item">
-                            <a class="footer-menu__link" href="#">Условия</a>
-                        </li>
-                        <li class="footer_company__item">
-                            <a class="footer-menu__link" href="#">Акции</a>
-                        </li>
-                        <li class="footer_company__item">
-                            <a class="footer-menu__link" href="#">Контакты</a>
-                        </li>
-                        <li class="footer_company__item">
-                            <a class="footer-menu__link" href="#">Отзывы</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer__item">
-                    <div class="footer-city">
-                        <ul class="footer-city__items">
-                            <li class="footer-city__item">
-                                <a class="footer-city__link" href="#">Город</a>
-                            </li>
-                            <li class="footer-city__item">
-                                <a class="footer-city__link" href="#">Телефон</a>
-                            </li>
-                            <li class="footer-city__item">
-                                <a class="footer-city__link" href="#">График работы</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer> -->
         <footer class="footer footer_padding">
             <div class="container">
                 <div class="footer__items">
@@ -466,6 +404,7 @@
             </div>
         </section>
     </main>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
