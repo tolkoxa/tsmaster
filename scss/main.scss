@@ -302,6 +302,12 @@
     box-sizing: border-box;
 }
 
+.carousel_1 {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
 .carousel img {
     margin: 0;
     padding: 0;
@@ -310,9 +316,17 @@
     display: block;
 }
 
+.carousel_1 li div .reviews__item {
+    margin: 0;
+    padding: 0;
+    width: 105.3%;
+    /*делаем этот элемент блочным, что бы убрать лишнее пространство вокргу картинок */
+    display: block;
+}
+
 .arrow {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     position: absolute;
     top: 45%;
     padding: 0;
@@ -326,7 +340,27 @@
     display: block;
 }
 
+.arrow_1 {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 45%;
+    padding: 0;
+    background-color: $bgcolor_blue;
+    border-radius: 2px;
+    border: 1px solid $bgcolor_blue;
+    box-shadow: 3px 3px 5px #000;
+    font-size: 24px;
+    line-height: 24px;
+    color: #fff;
+    display: block;
+}
+
 .arrow:focus {
+    outline: none;
+}
+
+.arrow_1:focus {
     outline: none;
 }
 
@@ -336,7 +370,17 @@
     cursor: pointer;
 }
 
+.arrow_1:hover {
+    background: #ccc;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
 .arrow:active {
+    box-shadow: none;
+}
+
+.arrow_1:active {
     box-shadow: none;
 }
 
@@ -345,13 +389,29 @@
     z-index: 10;
 }
 
+.prev_1 {
+    left: 0;
+    z-index: 10;
+}
+
 .next {
     right: 3%;
     z-index: 10;
 }
 
+.next_1 {
+    right: 0;
+    z-index: 10;
+}
+
 .gallery {
     width: 100%;
+    overflow: hidden;
+}
+
+.gallery_1 {
+    width: 81.6%;
+    margin: 0 auto;
     overflow: hidden;
 }
 
@@ -365,9 +425,24 @@
     font-size: 0;
 }
 
+.gallery_1 ul {
+    width: 9999px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: margin-left 1000ms;
+    /* удаляем пустое пространство между элементами li, у которых установлен inline-block */
+    font-size: 0;
+}
+
 .gallery li {
     display: inline-block;
     margin-right: 0.751%;
+}
+
+.gallery_1 li {
+    display: inline-block;
+    margin-right: 0.6%;
 }
 
 
