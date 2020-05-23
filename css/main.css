@@ -887,7 +887,7 @@
 }
 
 .before_1::before {
-  content: 'Вид техники';
+  content: "Вид техники";
   position: absolute;
   top: -25px;
   left: 80px;
@@ -903,7 +903,7 @@
 }
 
 .before_2::before {
-  content: 'Вид неисправности';
+  content: "Вид неисправности";
   position: absolute;
   top: -25px;
   left: 56px;
@@ -919,7 +919,7 @@
 }
 
 .before_3::before {
-  content: 'Стоимость услуги составит';
+  content: "Стоимость услуги составит";
   position: absolute;
   top: -25px;
   left: 17px;
@@ -1183,7 +1183,7 @@
 
 .dev-planb {
   padding: 0 15px 0 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 11px;
   color: white;
   display: -webkit-box;
@@ -1213,7 +1213,7 @@
           justify-content: flex-end;
   opacity: 0.5;
   cursor: pointer;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
 }
 
@@ -1252,4 +1252,3 @@
 .planb_b {
   font-weight: 700;
 }
-/*# sourceMappingURL=main.css.map */

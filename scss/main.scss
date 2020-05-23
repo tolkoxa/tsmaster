@@ -560,7 +560,7 @@
     &__request {
         margin: 0 0 0 0;
         padding: 0 8% 0 0;
-        background-image: url('../img/form-plate/form-plate_bg.jpg');
+        background-image: url("../img/form-plate/form-plate_bg.jpg");
         background-position: left center;
         background-repeat: no-repeat;
         background-size: auto;
@@ -741,7 +741,7 @@
 .before_1 {
     position: relative;
     &::before {
-        content: 'Вид техники';
+        content: "Вид техники";
         position: absolute;
         top: -25px;
         left: 80px;
@@ -756,7 +756,7 @@
 .before_2 {
     position: relative;
     &::before {
-        content: 'Вид неисправности';
+        content: "Вид неисправности";
         position: absolute;
         top: -25px;
         left: 56px;
@@ -771,7 +771,7 @@
 .before_3 {
     position: relative;
     &::before {
-        content: 'Стоимость услуги составит';
+        content: "Стоимость услуги составит";
         position: absolute;
         top: -25px;
         left: 17px;
@@ -788,7 +788,7 @@
 }
 
 .input_margin-lr {
-    margin: 0 20px
+    margin: 0 20px;
 }
 
 .reviews-arrow__link {
@@ -987,7 +987,7 @@
 
 .dev-planb {
     padding: 0 15px 0 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 11px;
     color: white;
     display: flex;
@@ -1006,7 +1006,7 @@
     justify-content: flex-end;
     opacity: 0.5;
     cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 20px;
 }
 
