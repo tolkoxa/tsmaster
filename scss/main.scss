@@ -352,8 +352,94 @@
     box-shadow: 3px 3px 5px #000;
     font-size: 24px;
     line-height: 24px;
-    color: #fff;
+    color: $text__second_color;
     display: block;
+}
+
+.cause {
+    width: 350px;
+    height: 70px;
+    position: absolute;
+    top: 63%;
+    left: 15%;
+    font-family: $font__second;
+    background-color: $bgcolor_blue;
+    color: $text__second_color;
+    border-radius: 15px;
+    box-shadow: 7px 7px 3px #888;
+    font-size: 34px;
+    line-height: 34px;
+    text-align: center;
+    padding: 15px;
+    display: block;
+    z-index: 10;
+}
+
+.cause_btn {
+    width: 350px;
+    height: 70px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: $font__second;
+    background-color: $bgcolor_blue;
+    color: $text__second_color;
+    border-radius: 15px;
+    font-size: 34px;
+    line-height: 34px;
+    text-align: center;
+    padding: 15px;
+    display: block;
+    z-index: 10;
+}
+
+.cause_btn_block {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: -15%;
+    left: 91%;
+    background-color: #fff;
+    color: $text__menu_color;
+    border-radius: 50%;
+    box-shadow: 7px 7px 3px #888;
+    font-size: 38px;
+    line-height: 38px;
+    text-align: center;
+    padding: 15px;
+    display: block;
+    z-index: 10;
+}
+
+.cause:focus {
+    outline: none;
+}
+
+.cause:hover .cause_btn {
+    background: #ccc;
+    cursor: pointer;
+}
+
+.cause:hover .cause_btn_block {
+    background: #ccc;
+    cursor: pointer;
+}
+
+.cause:hover .cause_btn_block {
+    box-shadow: none;
+}
+
+.cause:active .cause_btn {
+    box-shadow: none;
+}
+
+.cause:active .cause_btn_block {
+    background: #ccc;
+    cursor: pointer;
+}
+
+.cause:active {
+    box-shadow: none;
 }
 
 .arrow:focus {
