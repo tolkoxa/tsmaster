@@ -25,12 +25,9 @@ var position = 0; //положение прокрутки
 point.forEach(element => {
     element.addEventListener('click', number => {
         let pointData = number.srcElement.dataset.point;
-        console.log(pointData);
-        position = -1 * width * pointData;
-        console.log(position);
-        list.style.marginLeft = position + 'px'; //обращение у стилю тэга ul 
-        numPoint = pointData;
-        pointActive(numPoint);
+        position = -1 * width * pointData;//меняем позицию слайдера согласно точке
+        list.style.marginLeft = position + 'px'; //обращение к стилю тэга ul         
+        pointActive(pointData);
     });
 });
 
