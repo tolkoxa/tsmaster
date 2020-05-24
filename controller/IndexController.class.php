@@ -33,8 +33,10 @@ class IndexController extends Controller {
 
     public function page404($data) {
         $this->view = '404';
-        
+
         $arrayContent = [
+            'jsonDb' => $this->jsonDb,
+            'pageId' => 1,
             'siteName' => $this->mainTitle,
         ];
         return $arrayContent;

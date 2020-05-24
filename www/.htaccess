@@ -8,3 +8,4 @@ RewriteRule ^([a-z_a-z]+[0-9]?+)$ index.php?path=index/$1 [L]
 RewriteRule ^([a-z_a-z]+[0-9]?+)/(\w+)$ index.php?path=index/$1&id=$2 [L]
 RewriteRule /confirmation.php$ confirmation.php [L]
 RewriteRule /sendmailing.php$ sendmailing.php [L]
+ErrorDocument 404 /index.php?path=page404
