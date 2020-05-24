@@ -75,6 +75,7 @@ class App {
 		if (true) {
 
 			if (isset($post['apiMethod'])) {
+				
 				$methodName = $post['apiMethod'];
 				$model = new ApiMethod($methodName); //создаем модель класса api
 				if (!method_exists($model, $methodName)) {

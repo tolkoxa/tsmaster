@@ -304,7 +304,8 @@
         </main>
     </div>
     {% include 'footer.tpl' %}   
-    <script src="../js/script.js"></script>
+    <script defer src="js/jquery-3.4.1.js"></script> 
+    <script src="js/script.js"></script>
 </body>
 
 </html>

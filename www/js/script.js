@@ -99,3 +99,49 @@ carousel_1.querySelector('.next_1').onclick = function () {
     list_1.style.marginLeft = position_1 + 'px'; //обращение у стилю тэга ul
     console.log(position_1);
 };
+
+class Mailing {
+    constructor() {
+		this.name = 'antonio';
+        this.phone = '123456789';
+    }
+
+	_getJson(url, data) {
+		return $.post({
+            url: url,
+            data: data,
+            success: function (data) {
+                //data приходят те данные, который прислал на сервер
+                if (data.result !== "OK") {
+                    console.log('ERROR_SEND_DATA');
+                }
+            }
+        })
+	}
+
+    sendMail() {
+		let sendData = {
+			apiMethod: 'sendMailRepairRequest',
+			postData: {
+				name: this.name,
+				phone: this.phone,
+				device: 'стиральная машина',
+				defect: 'не сливает воду',
+			}
+		};
+		
+		this._getJson(`/index.php`, sendData)
+			.then(data => {
+				if (data.result === "OK") {
+					console.log('mail send!');
+				} else {
+					console.log('ERROR_SENDING');
+				}
+			})
+			.catch(error => {
+				console.log('fetch error');
+			});
+    }
+		
+};
+let mailing = new Mailing();

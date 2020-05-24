@@ -20,14 +20,12 @@ class ApiMethod {
 
 	public $dataBase;
 	public $method;
-	public $userModel;
 	public $requests;
 	public $mailing;
 
     public function __construct($method) {
         $this->method = $method;
         $this->dataBase = SQL::getInstance();
-        $this->userModel = new UserModel();
         $this->requests = new Requests();
         $this->mailing = new Mailing();
     }
@@ -121,13 +119,15 @@ class ApiMethod {
 		//Если пользователь не найден, возвращаем ошибку
 		if ($result) {
 			$_SESSION['user']['login'] = $login;
-			$this->success('OK');
+			$data['result'] = "OK";
+			$this->success($data);
 		} else {
 			$this->error('Ошибка записи пользователя в БД', 200);
 		}
 	}
 
 	public function sendMailRepairRequest() {
+
 		$name = $_POST['postData']['name'] ?? '';
 		$phone = $_POST['postData']['phone'] ?? '';
 		$device = $_POST['postData']['device'] ?? '';
@@ -144,12 +144,35 @@ class ApiMethod {
 		if (!$defect) {
 			$this->error('Не указана поломка');
 		}
-
 		$result = $this->mailing->sendMailRepairRequest($name, $phone, $reqType, $device, $defect, $city);
 
 		if ($result) {
-			$this->requests->addRequestToDB($name, $phone, $reqType, $device, $defect)
-			$this->success('OK');
+			$this->requests->addRequestToDB($name, $phone, $reqType, $device, $defect);
+			$data['result'] = "OK";
+			$this->success($data);
+		} else {
+			$this->error('Ошибка! Запрос не отправлен.', 200);
+		}
+	}
+
+	public function sendMailPhoneRequest() {
+		$name = $_POST['postData']['name'] ?? '';
+		$phone = $_POST['postData']['phone'] ?? '';
+		$device = $_POST['postData']['device'] ?? null;
+		$defect = $_POST['postData']['defect'] ?? null;
+		$city = $_POST['postData']['city'] ?? null;
+		$reqType = 'заявка на звонок';
+
+		if (!$name || !$phone) {
+			$this->error('Не указаны имя или телефон');
+		}
+
+		$result = $this->mailing->sendMailPhoneRequest($name, $phone, $reqType, $device, $defect, $city);
+
+		if ($result) {
+			$this->requests->addRequestToDB($name, $phone, $reqType, $device, $defect);
+			$data['result'] = "OK";
+			$this->success($data);
 		} else {
 			$this->error('Ошибка! Запрос не отправлен.', 200);
 		}
