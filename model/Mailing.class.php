@@ -40,7 +40,7 @@ class Mailing extends Model {
 	public function sendMailRepairRequest($name, $phone, $reqType, $device, $defect, $city = null) {
 		$loader = new \Twig\Loader\FilesystemLoader('../mail_templates');
 		$twig = new \Twig\Environment($loader);
-		$template = $twig->loadtemplate('confirm_mailing.tpl');
+		$template = $twig->loadtemplate('repair_request-mailing.tpl');
 
 
 		$arrayContent = [
@@ -59,10 +59,53 @@ class Mailing extends Model {
 
 
 		// несколько получателей
-		$to = 'astral457@mail.ru'; // список получателей через запятую
+		$to = 'client@mail.ru'; // список получателей через запятую
 
 		// тема письма
 		$subject = 'Заявка на ремонт';
+
+		// Для отправки HTML-письма должен быть установлен заголовок Content-type
+		$headers[] = 'MIME-Version: 1.0';
+		$headers[] = 'Content-type: text/html; charset=iso-8859-1';
+
+		// Дополнительные заголовки
+		// $headers[] = 'To: Mary <mary@example.com>, Kelly <kelly@example.com>';
+		$headers[] = 'From: TS Master <info@tsmaster.com>';
+		// $headers[] = 'Cc: birthdayarchive@example.com';
+		// $headers[] = 'Bcc: birthdaycheck@example.com';
+
+		// Отправляем
+		$result = mail($to, $subject, $message, implode("\r\n", $headers));
+
+		// if (!$result) {
+		//     return $errorMessage = error_get_last()['message'];
+		// }
+
+    	return $result;
+	}
+
+	public function sendMailPhoneRequest($name, $phone, $reqType, $device, $defect, $city = null) {
+		$loader = new \Twig\Loader\FilesystemLoader('../mail_templates');
+		$twig = new \Twig\Environment($loader);
+		$template = $twig->loadtemplate('phone_request-mailing.tpl');
+
+		$arrayContent = [
+		    'name' =>  $name,
+		    'phone' =>  $phone,
+		    'reqType' =>  $reqType,
+		    'city' =>  $city,
+		];
+		// echo '<pre>';
+		// print_r($arrayContent);
+		// echo '</pre/>';
+		// exit();
+		$message = $template->render($arrayContent);
+
+		// несколько получателей
+		$to = 'client@mail.ru'; // список получателей через запятую
+
+		// тема письма
+		$subject = 'Заявка на звонок';
 
 		// Для отправки HTML-письма должен быть установлен заголовок Content-type
 		$headers[] = 'MIME-Version: 1.0';

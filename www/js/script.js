@@ -119,7 +119,7 @@ class Mailing {
         })
 	}
 
-    sendMail() {
+    sendMailRepairRequest() {
 		let sendData = {
 			apiMethod: 'sendMailRepairRequest',
 			postData: {
@@ -127,6 +127,28 @@ class Mailing {
 				phone: this.phone,
 				device: 'стиральная машина',
 				defect: 'не сливает воду',
+			}
+		};
+		
+		this._getJson(`/index.php`, sendData)
+			.then(data => {
+				if (data.result === "OK") {
+					console.log('mail send!');
+				} else {
+					console.log('ERROR_SENDING');
+				}
+			})
+			.catch(error => {
+				console.log('fetch error');
+			});
+    }
+	
+	sendMailPhoneRequest() {
+		let sendData = {
+			apiMethod: 'sendMailPhoneRequest',
+			postData: {
+				name: this.name,
+				phone: this.phone,
 			}
 		};
 		
