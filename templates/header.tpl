@@ -2,27 +2,11 @@
         <div class="container">
             <nav class="menu__company">
                 <ul class="menu__items">
+                    {% for menu,link in content.jsonDb.main_menu %}
                     <li class="menu__item menu__item_margin">
-                        <a class="menu__link" href="#about">О компании</a>
+                        <a class="menu__link" href="{{link}}">{{menu}}</a>
                     </li>
-                    <li class="menu__item menu__item_margin">
-                        <a class="menu__link" href="#advantage">Преимущества</a>
-                    </li>
-                    <li class="menu__item menu__item_margin">
-                        <a class="menu__link" href="#services">Услуги</a>
-                    </li>
-                    <li class="menu__item menu__item_margin">
-                        <a class="menu__link" href="#terms">Условия</a>
-                    </li>
-                    <li class="menu__item menu__item_margin">
-                        <a class="menu__link" href="#action">Акции</a>
-                    </li>
-                    <li class="menu__item menu__item_margin">
-                        <a class="menu__link" href="#reviews">Отзывы</a>
-                    </li>
-                    <li class="menu__item menu__item_margin">
-                        <a class="menu__link" href="#contacts">Контакты</a>
-                    </li>
+                    {% endfor %}
                 </ul>
             </nav>
             <div class="logo-text-tel logo-text-tel_margin">

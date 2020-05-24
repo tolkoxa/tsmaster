@@ -45,9 +45,11 @@ class App {
 		//	echo ($methodName)."<br>";
 			$controller = new $controllerName(); //создаем контролер класса с указанным именем
 		/*поиск контролера*/	
-		/*формирование контроллером данных для шаблона*/	
+		/*формирование контроллером данных для шаблона*/
+			$check404 = method_exists($controller, $methodName);
+
 			$data = [
-					'content' => $controller->$methodName($_GET),
+					'content' => $check404 ? $controller->$methodName($_GET) : $controller->page404($_GET),
 					'mainTitle' => $controller->mainTitle, 
 					'head' => $controller->headcontent,
 					'title' => $controller->title,

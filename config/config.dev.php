@@ -14,6 +14,6 @@ $config['path_cache'] = $config['path_root'] . '/../cache';
 $config['path_libs'] = $config['path_root'] . '/../lib';
 $config['path_templates'] = $config['path_root'] . '/../templates';
 $config['path_logs'] = $config['path_root'] . '/../logs';
-$config['sitename'] = 'ТехСервис Мастер';
+// $config['sitename'] = 'ТехСервис Мастер';
 
 
