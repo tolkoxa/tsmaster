@@ -20,27 +20,15 @@ class ApiMethod {
 
 	public $dataBase;
 	public $method;
-	public $rndFilm;
-	public $rndQuote;
-	public $rndNumber;
-	public $rndWord;
 	public $userModel;
-	public $rndCongratulate;
-	public $history;
-	public $randomType;
+	public $requests;
 	public $mailing;
 
     public function __construct($method) {
         $this->method = $method;
         $this->dataBase = SQL::getInstance();
-        $this->rndFilm = new RndFilm();
-        $this->rndQuote = new RndQuote();
-        $this->rndNumber = new RndNumber();
-        $this->rndWord = new RndWord();
         $this->userModel = new UserModel();
-        $this->rndCongratulate = new RndCongratulate();
-        $this->history = new History();
-        $this->randomType = new Random();
+        $this->requests = new Requests();
         $this->mailing = new Mailing();
     }
 
@@ -99,7 +87,7 @@ class ApiMethod {
 			}
 			$this->success($data);
 		} else {
-			$this->error('Неверный логин или пароль');
+			$this->error('Неверный логин или пароль', 200);
 		}
 	}
 
@@ -135,11 +123,37 @@ class ApiMethod {
 			$_SESSION['user']['login'] = $login;
 			$this->success('OK');
 		} else {
-			$this->error('Ошибка записи пользователя в БД');
+			$this->error('Ошибка записи пользователя в БД', 200);
 		}
 	}
 
+	public function sendMailRepairRequest() {
+		$name = $_POST['postData']['name'] ?? '';
+		$phone = $_POST['postData']['phone'] ?? '';
+		$device = $_POST['postData']['device'] ?? '';
+		$defect = $_POST['postData']['defect'] ?? '';
+		$city = $_POST['postData']['city'] ?? null;
+		$reqType = 'заявка на ремонт';
 
+		if (!$name || !$phone) {
+			$this->error('Не указаны имя или телефон');
+		}
+		if (!$device) {
+			$this->error('Не указан вид техники');
+		}
+		if (!$defect) {
+			$this->error('Не указана поломка');
+		}
+
+		$result = $this->mailing->sendMailRepairRequest($name, $phone, $reqType, $device, $defect, $city);
+
+		if ($result) {
+			$this->requests->addRequestToDB($name, $phone, $reqType, $device, $defect)
+			$this->success('OK');
+		} else {
+			$this->error('Ошибка! Запрос не отправлен.', 200);
+		}
+	}
 
 };
 

@@ -16,46 +16,22 @@
                     <div class="footer__item">
                         <p class="footer__title text_margin_1">Ремонт</p>
                         <ul class="footer__list">
+                            {% for menu,link in content.jsonDb.service_menu %}
+                            {% if menu != 'главная' %}
                             <li class="footer__menu_item text_margin_1">
-                                <a class="footer__menu_link text_uppercase text_grey" href="#">Стиральная машина</a>
+                                <a class="footer__menu_link text_uppercase text_grey" href="{{link}}">{{menu}}</a>
                             </li>
-                            <li class="footer__menu_item text_margin_1">
-                                <a class="footer__menu_link text_uppercase text_grey" href="#">Посудомоечная машина</a>
-                            </li>
-                            <li class="footer__menu_item text_margin_1">
-                                <a class="footer__menu_link text_uppercase text_grey" href="#">Холодильник</a>
-                            </li>
-                            <li class="footer__menu_item text_margin_1">
-                                <a class="footer__menu_link text_uppercase text_grey" href="#">духовой шкаф</a>
-                            </li>
-                            <li class="footer__menu_item text_margin_1">
-                                <a class="footer__menu_link text_uppercase text_grey" href="#">варочная панель</a>
-                            </li>
+                            {% endif %}
+                            {% endfor %}
                         </ul>
                     </div>
                     <div class="footer__item">
                         <ul class="footer__list">
+                            {% for menu,link in content.jsonDb.main_menu %}
                             <li class="footer__menu_item text_margin_2">
-                                <a class="footer__menu_link text_grey" href="#">О компании</a>
+                                <a class="footer__menu_link text_grey" href="{{link}}">{{menu}}</a>
                             </li>
-                            <li class="footer__menu_item text_margin_2">
-                                <a class="footer__menu_link text_grey" href="#">Преимущества</a>
-                            </li>
-                            <li class="footer__menu_item text_margin_2">
-                                <a class="footer__menu_link text_grey" href="#">Услуги</a>
-                            </li>
-                            <li class="footer__menu_item text_margin_2">
-                                <a class="footer__menu_link text_grey" href="#">Условия</a>
-                            </li>
-                            <li class="footer__menu_item text_margin_2">
-                                <a class="footer__menu_link text_grey" href="#">Акции</a>
-                            </li>
-                            <li class="footer__menu_item text_margin_2">
-                                <a class="footer__menu_link text_grey" href="#">Контакты</a>
-                            </li>
-                            <li class="footer__menu_item text_margin_2">
-                                <a class="footer__menu_link text_grey" href="#">Отзывы</a>
-                            </li>
+                            {% endfor %}
                         </ul>
                     </div>
                     <div class="footer__item">
