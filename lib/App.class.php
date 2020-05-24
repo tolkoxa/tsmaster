@@ -18,8 +18,6 @@ class App {
 	
 	//http://site.ru/index.php?path=news/edit/5
 	protected function web($url) {
-		$newGen = new SomeGenerator();
-		$_SESSION['h'] = $newGen->genHash(strtotime('now'));
 
 		/*парсинг строки*/
 		$url= explode("/",$url);
@@ -38,13 +36,12 @@ class App {
 		} else {
 			$_GET['page'] = 'Index';	
 		}	
-		$_SESSION['vk_token'] = $_SESSION['vk_token'] ?? $_SESSION['vk_token'];
 		/*парсинг строки*/	
 		/*поиск контролера*/
 		if (isset($_GET['page'])) {
-			$controllerName = ucfirst($_GET['page'])."Controller";
+			$controllerName = ucfirst($_GET['page']) . 'Controller';
 		//	echo ($controllerName)."<br>";
-			$methodName = isset($_GET['action'])?$_GET['action']:'index';
+			$methodName = isset($_GET['action']) ? $_GET['action'] : 'index';
 		//	echo ($methodName)."<br>";
 			$controller = new $controllerName(); //создаем контролер класса с указанным именем
 		/*поиск контролера*/	
@@ -54,9 +51,7 @@ class App {
 					'mainTitle' => $controller->mainTitle, 
 					'head' => $controller->headcontent,
 					'title' => $controller->title,
-					'menu' => $controller->showMenu(),
 					'pagename' => $controller->pageName,
-					'userCheck'=> $controller->checkUser(),   //проверка юзера
 					'user'=> $_SESSION['user']['login'],
 			];
 		/*формирование контроллером данных для шаблона*/		

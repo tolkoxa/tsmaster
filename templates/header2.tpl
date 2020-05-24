@@ -39,28 +39,21 @@
                     <button class="tel__btn">Заказать звонок</button>
                 </div>
             </div>
-        {% if content.pageId == 1 %}           
-            {% include 'service_menu.tpl' %}                           
-        {% endif %}
-        {% if content.pageId == 1 %}           
-             <div class="bullet__items bullet__items_margin">
-        {% elseif content.pageId != 1 %}                      
-             <div class="bullet__items bullet__items_margin bullet__items_top">                        
-        {% endif %}            
+            <div class="bullet__items bullet__items_top bullet__items_margin">
                 <div class="bullet__item">
-                    <img class="bullet__img" src="img/bullets/01.jpg" alt="Работаем ежедневно">
+                    <img class="bullet__img" src="../img/bullets/01.jpg" alt="Работаем ежедневно">
                     <div class="bullet__text">Работаем ежедневно</div>
                 </div>
                 <div class="bullet__item">
-                    <img class="bullet__img" src="img/bullets/02.jpg" alt="бесплатный выезд">
+                    <img class="bullet__img" src="../img/bullets/02.jpg" alt="бесплатный выезд">
                     <div class="bullet__text">бесплатный выезд</div>
                 </div>
                 <div class="bullet__item">
-                    <img class="bullet__img" src="img/bullets/03.jpg" alt="бесплатная диагностика">
+                    <img class="bullet__img" src="../img/bullets/03.jpg" alt="бесплатная диагностика">
                     <div class="bullet__text">бесплатная диагностика</div>
                 </div>
                 <div class="bullet__item">
-                    <img class="bullet__img" src="img/bullets/04.jpg" alt="гарантия на наши услуги">
+                    <img class="bullet__img" src="../img/bullets/04.jpg" alt="гарантия на наши услуги">
                     <div class="bullet__text">гарантия<br>на наши услуги</div>
                 </div>
             </div>

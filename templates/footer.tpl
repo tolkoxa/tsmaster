@@ -1,37 +1,87 @@
-<footer class="footer-main">
-    <div class="footer-main-blocks">
-        <a href="index.php" class="logo-link">
-            <p class="footer-main-logo-name">RANDOMIZER</p>
-            <p class="footer-main-logo-desc">СЛУЧАЙНОСТИ НЕ СЛУЧАЙНЫ</p>
-        </a>
-        <p class="project-desc">Каждый человек был в ситуации, когда не знаешь, как поступить, какое решение принять, что подарить, какой фильм посмотреть, куда сходить вечером и т.д</p>
-        <p class="project-desc">На поиск ответа тратится так много сил и нервов, что когда решение наконец–то принято, оно уже не радует нас так сильно.</p>
-        <p class="project-desc">Сервис решает задачи выбора в нескольких направлениях: от развлечения пользователя и решения бытовых вопросов, до расширения его кругозора и личностного развития.</p>
-        <a class="footer-more-link">Подробнее о проекте</a>
-    </div>
-    <div class="footer-main-blocks">
-        <a class="all-category">Все категории</a>
-        <a href="https://vk.com/randomizeroftheday" class="footer-more-link">Группа Вконтакте</a>
-        <a href="https://www.instagram.com/randomizer.me/" class="footer-more-link">Instagram</a>
-        <a href="https://tele.gg/randomizerme" class="footer-more-link" data-c="{{content.hash}}">Телеграм&#151;канал</a>
-        <p class="email-send">
-            Подпишись на рассылку и получай подборку из 7 случайностей себе на почту раз в неделю.
-        </p>
-        <form class="mailing-form" novalidate>
-            <input id="email-mailing" type="email" class="email-input" placeholder="info@randomizer.me" required>
-            <button class="button-send">Подписаться</button>
-            <div class="mail_check_err">
-                <p class="mail_check_msg">Адрес электронной почты должен содержать символ "@". Поверьте правильность указанного адреса.</p>
+ <footer class="footer footer_padding">
+            <div class="container">
+                <div class="footer__items">
+                    <div class="footer__item">
+                        <div class="logo-name">
+                            <a name="contacts"></a>
+                            <div class="logo__title">
+                                <a class="logo__link" href="/"> ТехСервис&nbsp;Мастер
+                                </a>
+                            </div>
+                            <p class="logo__subtitle section__subtitle_white">ремонт&nbsp;бытовой&nbsp;техники&nbsp;в&nbsp;Екатеринбурге</p>
+                        </div>
+                        <div class="footer__desc">Описание....................................... ......................................................... ......................................................... ......................................................... .........................................................
+                        </div>
+                    </div>
+                    <div class="footer__item">
+                        <p class="footer__title text_margin_1">Ремонт</p>
+                        <ul class="footer__list">
+                            <li class="footer__menu_item text_margin_1">
+                                <a class="footer__menu_link text_uppercase text_grey" href="#">Стиральная машина</a>
+                            </li>
+                            <li class="footer__menu_item text_margin_1">
+                                <a class="footer__menu_link text_uppercase text_grey" href="#">Посудомоечная машина</a>
+                            </li>
+                            <li class="footer__menu_item text_margin_1">
+                                <a class="footer__menu_link text_uppercase text_grey" href="#">Холодильник</a>
+                            </li>
+                            <li class="footer__menu_item text_margin_1">
+                                <a class="footer__menu_link text_uppercase text_grey" href="#">духовой шкаф</a>
+                            </li>
+                            <li class="footer__menu_item text_margin_1">
+                                <a class="footer__menu_link text_uppercase text_grey" href="#">варочная панель</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__item">
+                        <ul class="footer__list">
+                            <li class="footer__menu_item text_margin_2">
+                                <a class="footer__menu_link text_grey" href="#">О компании</a>
+                            </li>
+                            <li class="footer__menu_item text_margin_2">
+                                <a class="footer__menu_link text_grey" href="#">Преимущества</a>
+                            </li>
+                            <li class="footer__menu_item text_margin_2">
+                                <a class="footer__menu_link text_grey" href="#">Услуги</a>
+                            </li>
+                            <li class="footer__menu_item text_margin_2">
+                                <a class="footer__menu_link text_grey" href="#">Условия</a>
+                            </li>
+                            <li class="footer__menu_item text_margin_2">
+                                <a class="footer__menu_link text_grey" href="#">Акции</a>
+                            </li>
+                            <li class="footer__menu_item text_margin_2">
+                                <a class="footer__menu_link text_grey" href="#">Контакты</a>
+                            </li>
+                            <li class="footer__menu_item text_margin_2">
+                                <a class="footer__menu_link text_grey" href="#">Отзывы</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__item">
+                        <div class="footer-city">
+                            <ul class="footer__list">
+                                <li class="footer__menu_item text_margin_3">
+                                    <a class="footer__menu_link text_white" href="#">Город</a>
+                                </li>
+                                <li class="footer__menu_item text_margin_3">
+                                    <a class="footer__menu_link text_white" href="#">Телефон</a>
+                                </li>
+                                <li class="footer__menu_item text_margin_3">
+                                    <a class="footer__menu_link text_white" href="#">График работы</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </form>
-    </div>
-    <div class="footer-main-blocks">
-        <p class="project-desc">Напишите нам</p>
-        <form action="#" method="post">
-            <input type="text" class="email-input" placeholder="Имя">
-            <input type="text" class="email-input" placeholder="Ваш e–mail для ответа">
-            <textarea class="textarea" placeholder="Сообщение"></textarea>
-            <button class="button-send-2">Отправить</button>
-        </form>
-    </div>
-</footer>
+        </footer>
+        <section class="plan-b-style">
+            <div class="dev-planb">Разработано в&nbsp;
+                <a href="http://plan-b.studio" style="text-decoration: none;">
+                    <div class="plan-b">
+                        <span class="planb_p">p</span><span class="planb_l">l</span><span class="planb_a">a</span><span class="planb_n">n</span>&nbsp;<span class="planb_b">b</span>
+                    </div>
+                </a>
+            </div>
+        </section>
