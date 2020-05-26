@@ -29,10 +29,10 @@ showModal(reviewBtn, windReview, sub_wind2, crossBtn2);
 /**
 * Функция вызова модальных окон 
 * данные по порядку
-* @param {object} callBtn Кнопка вызова модального окна.
-* @param {object} windModal Модальное окно.
-* @param {object} shadowWindow Затенение экрана.
-* @param {object} crossBtn Крестик для закрытия окна.
+* @param {any} callBtn Кнопка вызова модального окна.
+* @param {any} windModal Модальное окно.
+* @param {any} shadowWindow Затенение экрана.
+* @param {any} crossBtn Крестик для закрытия окна.
 */
 function showModal(callBtn, windModal, shadowWindow, crossBtn) {
     callBtn.addEventListener('click', () => {
