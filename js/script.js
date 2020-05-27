@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 //Карусель верхнего модуля
 //помечаем код для удобства
@@ -17,8 +17,19 @@ let numPoint = 0; //текущая картинка, точка верхнего
 
 let list = carousel.querySelector('ul');
 let listElems = carousel.querySelectorAll('li');
+let point = points.querySelectorAll('a');
 
-let position = 0; //положение прокрутки
+var position = 0; //положение прокрутки
+
+//переход по точкам верхнего слайдера
+point.forEach(element => {
+    element.addEventListener('click', number => {
+        let pointData = number.srcElement.dataset.point;
+        position = -1 * width * pointData;//меняем позицию слайдера согласно точке
+        list.style.marginLeft = position + 'px'; //обращение к стилю тэга ul         
+        pointActive(pointData);
+    });
+});
 
 //сдвиг в лево Размеры зависят от картинок в верстке
 carousel.querySelector('.prev').onclick = function () {
@@ -49,8 +60,6 @@ carousel.querySelector('.next').onclick = function () {
     pointActive(numPoint);
 };
 //Делаем зависимость точек
-let point = points.querySelectorAll('a');
-
 //подстветка точек
 function pointActive(num) {
     point.forEach(elem => {
@@ -99,3 +108,5 @@ carousel_1.querySelector('.next_1').onclick = function () {
     list_1.style.marginLeft = position_1 + 'px'; //обращение у стилю тэга ul
     console.log(position_1);
 };
+
+

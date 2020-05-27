@@ -612,6 +612,89 @@
 }
 
 
+/*модальные окна*/
+
+.screen_off {
+    display: none;
+}
+
+.substrate {
+    position: absolute;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(3, 3, 3, 0.562);
+    z-index: 11;
+}
+
+.modal_phone {
+    position: absolute;
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    top: 20%;
+    right: 10%;
+    border: 1px solid #000;
+    background-color: $bg-form__plate_color;
+    z-index: 12;
+}
+
+.cross {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: -50px;
+    right: -50px;
+    border: 1px solid $bg-menu__plate_color;
+    background-color: $bg-form__plate_color;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.substrate1 {
+    position: absolute;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(3, 3, 3, 0.562);
+    z-index: 11;
+}
+
+.modal_cause {
+    position: absolute;
+    position: fixed;
+    width: 400px;
+    height: 700px;
+    top: 20%;
+    right: 45%;
+    border: 1px solid #000;
+    background-color: $bg-form__plate_color;
+    z-index: 12;
+}
+
+.cross1 {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: -50px;
+    right: -50px;
+    border: 1px solid $bg-menu__plate_color;
+    background-color: $bg-form__plate_color;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 12;
+}
+
+
 /*Карусель*/
 
 .carousel {
@@ -670,8 +753,96 @@
     box-shadow: 3px 3px 5px #000;
     font-size: 24px;
     line-height: 24px;
-    color: #fff;
+    color: $text__second_color;
     display: block;
+}
+
+.cause {
+    width: 350px;
+    height: 70px;
+    position: absolute;
+    top: 63%;
+    left: 15%;
+    font-family: $font__second;
+    background-color: $bgcolor_blue;
+    color: $text__second_color;
+    border-radius: 15px;
+    box-shadow: 7px 7px 3px #888;
+    font-size: 34px;
+    line-height: 34px;
+    text-align: center;
+    display: block;
+    z-index: 10;
+}
+
+.cause_btn {
+    width: 350px;
+    height: 70px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: $font__second;
+    background-color: $bgcolor_blue;
+    color: $text__second_color;
+    border-radius: 15px;
+    font-size: 34px;
+    line-height: 34px;
+    text-align: center;
+    padding: 15px;
+    display: block;
+    z-index: 10;
+}
+
+.cause_btn_block {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: -15%;
+    left: 91%;
+    background-color: #fff;
+    color: $text__menu_color;
+    border-radius: 50%;
+    box-shadow: 7px 7px 3px #888;
+    font-size: 38px;
+    line-height: 38px;
+    text-align: center;
+    padding: 15px;
+    display: block;
+    z-index: 10;
+}
+
+.cause:focus {
+    outline: none;
+}
+
+.cause:hover .cause_btn {
+    background: $btn_color;
+    cursor: pointer;
+    color: $text__main_color;
+    border: 5px solid $text__second_color;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.cause:hover .cause_btn_block {
+    background: $btn_color;
+    cursor: pointer;
+    color: $text__main_color;
+    border: 5px solid $text__second_color;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.cause:active .cause_btn {
+    box-shadow: none;
+}
+
+.cause:active .cause_btn_block {
+    box-shadow: none;
+}
+
+.cause:active {
+    box-shadow: none;
 }
 
 .arrow:focus {
@@ -884,7 +1055,7 @@
     &__request {
         margin: 0 0 0 0;
         padding: 0 8% 0 0;
-        background-image: url('../img/form-plate/form-plate_bg.jpg');
+        background-image: url("../img/form-plate/form-plate_bg.jpg");
         background-position: left center;
         background-repeat: no-repeat;
         background-size: auto;
@@ -1064,7 +1235,7 @@
 .before_1 {
     position: relative;
     &::before {
-        content: 'Вид техники';
+        content: "Вид техники";
         position: absolute;
         top: -25px;
         left: 80px;
@@ -1079,7 +1250,7 @@
 .before_2 {
     position: relative;
     &::before {
-        content: 'Вид неисправности';
+        content: "Вид неисправности";
         position: absolute;
         top: -25px;
         left: 56px;
@@ -1094,7 +1265,7 @@
 .before_3 {
     position: relative;
     &::before {
-        content: 'Стоимость услуги составит';
+        content: "Стоимость услуги составит";
         position: absolute;
         top: -25px;
         left: 17px;
@@ -1111,7 +1282,7 @@
 }
 
 .input_margin-lr {
-    margin: 0 20px
+    margin: 0 20px;
 }
 
 .reviews-arrow__link {
@@ -1309,7 +1480,7 @@
 
 .dev-planb {
     padding: 0 15px 0 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 11px;
     color: white;
     display: flex;
@@ -1328,7 +1499,7 @@
     justify-content: flex-end;
     opacity: 0.5;
     cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 20px;
 }
 
