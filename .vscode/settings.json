@@ -4,5 +4,6 @@
     "git.openDiffOnClick": false,
     "git.promptToSaveFilesBeforeCommit": "never",
     "git.pullTags": false,
-    "git.showCommitInput": false
+    "git.showCommitInput": false,
+    "editor.tabSize": 6
 }
