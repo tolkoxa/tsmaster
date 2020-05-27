@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <!-- <link rel="stylesheet" href="scss/main.css"> -->
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@200;300;400;700&display=swap" rel="stylesheet">
     <title>ТехСервис Мастер</title>
 </head>
@@ -98,16 +99,26 @@
                 </div>
             </div>
         </div>
+        <div class="substrate screen_off">
+            <div class="modal_phone">
+                <div class="cross">&#10006;</div>
+            </div>
+        </div>
     </header>
     <main class="main-style">
+        <div class="substrate1 screen_off">
+            <div class="modal_cause">
+                <div class="cross1">&#10006;</div>
+            </div>
+        </div>
         <section class="slider">
             <div class="container">
                 <div id="points" class="slider__points slider__points_margin">
-                    <a class="slider__point slider__point_active"></a>
-                    <a class="slider__point"></a>
-                    <a class="slider__point"></a>
-                    <a class="slider__point"></a>
-                    <a class="slider__point"></a>
+                    <a data-point="0" class="slider__point slider__point_active"></a>
+                    <a data-point="1" class="slider__point"></a>
+                    <a data-point="2" class="slider__point"></a>
+                    <a data-point="3" class="slider__point"></a>
+                    <a data-point="4" class="slider__point"></a>
                 </div>
                 <div class="slider__top slider__top_margin">
                     <!-- <div class="slider__item">
@@ -115,17 +126,21 @@
                     </div> -->
                     <div class="slider__item">
                         <div id="carousel" class="carousel">
-                            <button class="arrow prev"><</button>
+                            <button class="arrow prev">&lt;</button>
+                            <div class="cause">
+                                <div class="cause_btn">Вызвать мастера!</div>
+                                <div class="cause_btn_block">&#10004;</div>
+                            </div>
                             <div class="gallery">
                                 <ul class="images">
                                     <li><img src="./img/top-slider/top-slider_01.jpg"></li>
-                                    <li><img src="./img/top-slider/top-slider_01.jpg"></li>
-                                    <li><img src="./img/top-slider/top-slider_01.jpg"></li>
-                                    <li><img src="./img/top-slider/top-slider_01.jpg"></li>
-                                    <li><img src="./img/top-slider/top-slider_01.jpg"></li>
+                                    <li><img src="./img/top-slider/top-slider_02.jpg"></li>
+                                    <li><img src="./img/top-slider/top-slider_03.jpg"></li>
+                                    <li><img src="./img/top-slider/top-slider_04.jpg"></li>
+                                    <li><img src="./img/top-slider/top-slider_05.jpg"></li>
                                 </ul>
                             </div>
-                            <button class="arrow next">></button>
+                            <button class="arrow next">&gt;</button>
                         </div>
                     </div>
                     <div class="slider__item">
@@ -478,6 +493,7 @@
             </div>
         </section>
     </main>
+    <script src="./js/modal.js"></script>
     <script src="./js/script.js"></script>
 </body>
 
