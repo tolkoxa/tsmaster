@@ -28,7 +28,7 @@
             <a
               class="footer__menu_link text_uppercase text_grey"
               href="{{ link }}"
-              >{{ menu }}</a
+              >{{ menu | raw }}</a
             >
           </li>
           {% endif %} {% endfor %}
@@ -39,7 +39,7 @@
           {% for menu,link in content.jsonDb.main_menu %}
           <li class="footer__menu_item text_margin_2">
             <a class="footer__menu_link text_grey" href="{{ link }}">{{
-              menu
+              menu | raw
             }}</a>
           </li>
           {% endfor %}

@@ -4,7 +4,7 @@
                 <ul class="menu__items">
                     {% for menu,link in content.jsonDb.main_menu %}
                     <li class="menu__item menu__item_margin">
-                        <a class="menu__link" href="{{link}}">{{menu}}</a>
+                        <a class="menu__link" href="{{link}}">{{menu|raw}}</a>
                     </li>
                     {% endfor %}
                 </ul>
