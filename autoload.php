@@ -6,7 +6,7 @@ spl_autoload_register("NewStandarAutoloader");
 function NewStandarAutoloader ($className) {
 	$dirs = ['controller',
 		   'model',
-		   'lib'];
+		   'libs'];
 	$found = false;
     foreach($dirs as $dir) {
 			$filename = __DIR__ . '/' . $dir . '/' . $className . '.class.php';

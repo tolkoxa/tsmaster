@@ -159,7 +159,9 @@
                         <div class="form__item">
                             <div class="before_1">
                                 <select class="select input_margin" type="text">
-                                    <option class="form__option" value=""></option>
+                                    {% for technic,desc in content.jsonDb.defects %}
+                                        <option class="form__option" value="">{{technic}}</option>
+                                    {% endfor %}
                                 </select>
                             </div>
                             <input class="input" type="text" placeholder="Ваше имя">
