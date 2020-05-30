@@ -6,13 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@200;300;400;700&display=swap" rel="stylesheet">
-    <title>{{ content.siteName }}</title>
+    <title>{{ content.siteName|raw }}</title>
 </head>
 
 <body>
     <div class="top-line"></div>
     {% include 'header.tpl' %}
     <main class="main-style">
+         <!-- modal window -->
+         <div class="substrate1 screen_off">
+            <div class="modal_cause screen_off">
+                <div class="cross1">&#10006;</div>
+                <input class="input" type="text" placeholder="Ваше имя">
+                <input class="input" type="text" placeholder="Номер телефона">
+                <button class="button" type="button">Вызвать мастера!</button>
+            </div>
+        </div>
         <section class="slider">
             <div class="container">
                 <div id="points" class="slider__points slider__points_margin">
@@ -29,13 +38,17 @@
                     <div class="slider__item">
                         <div id="carousel" class="carousel">
                             <button class="arrow prev"><</button>
+                            <div class="cause">
+                                <div class="cause_btn">Вызвать мастера!</div>
+                                <div class="cause_btn_block">&#10004;</div>
+                            </div>
                             <div class="gallery">
                                 <ul class="images">
                                     <li><img src="./img/top-slider/top-slider_01.jpg"></li>
-                                    <li><img src="./img/top-slider/top-slider_01.jpg"></li>
-                                    <li><img src="./img/top-slider/top-slider_01.jpg"></li>
-                                    <li><img src="./img/top-slider/top-slider_01.jpg"></li>
-                                    <li><img src="./img/top-slider/top-slider_01.jpg"></li>
+                                    <li><img src="./img/top-slider/top-slider_02.jpg"></li>
+                                    <li><img src="./img/top-slider/top-slider_03.jpg"></li>
+                                    <li><img src="./img/top-slider/top-slider_04.jpg"></li>
+                                    <li><img src="./img/top-slider/top-slider_05.jpg"></li>
                                 </ul>
                             </div>
                             <button class="arrow next">></button>
@@ -274,6 +287,12 @@
                 <div class="button__reviews_margin">
                     <button class="button-reviews">Оставить отзыв</button>
                 </div>
+                <!-- modal window -->
+                <div class="substrate2 screen_off">
+                    <div class="modal_rewiew screen_off">
+                        <div class="cross2">&#10006;</div>
+                    </div>
+                </div>
         </section>
         <section class="form-question">
             <div class="container2">
@@ -306,7 +325,8 @@
     </main>
     {% include 'footer.tpl' %}  
     <script defer src="js/jquery-3.4.1.js"></script> 
-    <script src="js/script.js"></script>
+    <script defer src="./js/modal.js"></script>
+    <script defer src="js/script.js"></script>
 </body>
 
 </html>
