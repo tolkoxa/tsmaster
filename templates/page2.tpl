@@ -140,37 +140,11 @@
                             </div>
                         </section>
                         <section class="cost-table">
-                            <div class="container3">
-                                <div class="section__title section__title_black section__title_margin">стоимость ремонта стиральной машины, от<sup>*</sup></div>
-                                <div class="cost-table_position">
-                                    <div class="cost-table__grid cost-table_margin">
-                                        <div class="cell-title">неисправность</div>
-                                        <div class="cell-title">стоимость</div>
-                                        <div class="cell-name">Не начинает стирку</div>
-                                        <div class="cell-price">150 ₽</div>
-                                        <div class="cell-name">Не сливает воду</div>
-                                        <div class="cell-price">150 ₽</div>
-                                        <div class="cell-name">Не набирает воду</div>
-                                        <div class="cell-price">160 ₽</div>
-                                        <div class="cell-name">Не вращает барабан</div>
-                                        <div class="cell-price">160 ₽</div>
-                                        <div class="cell-name">Не отжимает</div>
-                                        <div class="cell-price">150 ₽</div>
-                                        <div class="cell-name">Шумит и вибрирует</div>
-                                        <div class="cell-price">160 ₽</div>
-                                        <div class="cell-name">Не включается</div>
-                                        <div class="cell-price">160 ₽</div>
-                                        <div class="cell-name">Течёт</div>
-                                        <div class="cell-price">120 ₽</div>
-                                        <div class="cell-name">Не открывается люк</div>
-                                        <div class="cell-price">160 ₽</div>
-                                    </div>
-                                </div>
-                                <div class="table-footnote table-footnote_margin">
-                                    <sup>*</sup> Точную стоимость работ инженер определит после диагностики.<br>
-                                    <sup>**</sup> Диагностика бесплатная в случае осуществления ремонта.
-                                </div>
-                            </div>
+                            {% if content.defectTable == 1 %}           
+                                {% include 'defect_table1.tpl' %}
+                            {% elseif content.defectTable == 2 %}                      
+                                {% include 'defect_table2.tpl' %}           
+                            {% endif %} 
                         </section>
                         <section class="form-search">
                             <div class="container3">
@@ -183,7 +157,9 @@
                                         <div class="form__item">
                                             <div class="before_1">
                                                 <select class="select input_margin" type="text">
-                                                    <option class="form__option" value=""></option>
+                                                    {% for technic,desc in content.jsonDb.defects %}
+                                                    <option class="form__option" value="">{{technic}}</option>
+                                                    {% endfor %}
                                                 </select>
                                             </div>
                                             <input class="input" type="text" placeholder="Ваше имя">

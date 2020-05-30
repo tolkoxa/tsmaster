@@ -17,7 +17,7 @@
          <div class="substrate1 screen_off">
             <div class="modal_cause screen_off">
                 <div class="cross1">&#10006;</div>
-                <input class="input" type="text" placeholder="Ваше имя">
+                <input class="input" type="text" placeholder="Ваше имя" maxlength="30">
                 <input class="input" type="text" placeholder="Номер телефона">
                 <button class="button" type="button">Вызвать мастера!</button>
             </div>

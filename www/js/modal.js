@@ -35,25 +35,25 @@ showModal(reviewBtn, windReview, sub_wind2, crossBtn2);
  * @param {any} crossBtn Крестик для закрытия окна.
  */
 function showModal(callBtn, windModal, shadowWindow, crossBtn) {
-  callBtn.addEventListener('click', () => {
-    shadowWindow.classList.remove('screen_off');
-    windModal.classList.remove('screen_off');
-  });
-  crossBtn.addEventListener('click', () => {
-    shadowWindow.classList.add('screen_off');
-    windModal.classList.add('screen_off');
-  });
-  shadowWindow.addEventListener('click', () => {
-    // shadowWindow.classList.add('screen_off');
-    // windModal.classList.add('screen_off');
-  });
+    callBtn.addEventListener('click', () => {
+        shadowWindow.classList.remove('screen_off');
+        windModal.classList.remove('screen_off');
+    });
+    crossBtn.addEventListener('click', () => {
+        shadowWindow.classList.add('screen_off');
+        windModal.classList.add('screen_off');
+    });
+    shadowWindow.addEventListener('click', () => {
+        // shadowWindow.classList.add('screen_off');
+        // windModal.classList.add('screen_off');
+    });
 
-  //закрытие окна при клике вне окна
-  document.addEventListener('mouseup', (e) => {
-    // событие клика по веб-документу
-    if (windModal != e.target && e.target.parentNode != windModal) {
-      // если клик был не по нашему блоку и не по его дочерним элементам
-      shadowWindow.classList.add('screen_off'); // скрываем его
-    }
-  });
+    //закрытие окна при клике вне окна
+    document.addEventListener('mouseup', (e) => {
+        // событие клика по веб-документу
+        if (windModal != e.target && e.target.parentNode != windModal) {
+            // если клик был не по нашему блоку и не по его дочерним элементам
+            shadowWindow.classList.add('screen_off'); // скрываем его
+        }
+    });
 }

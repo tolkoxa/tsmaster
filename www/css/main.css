@@ -534,7 +534,7 @@
   border: 1px solid black;
   display: grid;
   grid-template-columns: auto 200px;
-  grid-template-rows: repeat(9, 50px);
+  grid-template-rows: 50px;
 }
 
 .cost-table_margin {
@@ -1109,6 +1109,7 @@
 
 .section__title_margin {
   margin-bottom: 30px;
+  font-size: 23px;
 }
 
 .section__subtitle {
@@ -1172,6 +1173,7 @@
   padding: 5px;
   width: 270px;
   height: 45px;
+  padding: 0 10px 0 10px;
   border-radius: 10px;
   border: none;
   background-color: #fff;
