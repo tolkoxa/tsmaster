@@ -43,15 +43,41 @@ class IndexController extends Controller {
     }
 
     public function washing_machine($data) {
-        $this->pageId = 2;
-        $this->view = 'page2';
-        
+        $defects = $this->jsonDb['defects']['стиральная машина'];
+        $defectTable = 1;
+        // echo '<pre>'; 
+        // print_r($data);
+        // echo '</pre>';
+        // exit;
+
+        switch ($data['id']) {
+            case 'ne_slivaet_vodu':
+                $defectTable = 2;
+                $defects = $this->jsonDb['defects']['стиральная машина']['Не сливает воду*180*/washing_machine/ne_slivaet_vodu'];
+                $this->pageId = 2;
+                $this->view = 'page2';
+                break;
+            
+            default:
+                $this->pageId = 2;
+                $this->view = 'page2';
+                break;
+        }
+// echo '<pre>'; 
+//         print_r($defects);
+//         echo '</pre>';
+//         exit;
+
         $arrayContent = [
+            'defectTable' => $defectTable,
             'jsonDb' => $this->jsonDb,
+            'defects' => $defects,
             'pageId' => $this->pageId,
             'siteName' => $this->mainTitle,
         ];
+        
         return $arrayContent;
     }
 	
 }
+?>

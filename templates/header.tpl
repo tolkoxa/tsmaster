@@ -4,7 +4,7 @@
                 <ul class="menu__items">
                     {% for menu,link in content.jsonDb.main_menu %}
                     <li class="menu__item menu__item_margin">
-                        <a class="menu__link" href="{{link}}">{{menu}}</a>
+                        <a class="menu__link" href="{{link}}">{{menu|raw}}</a>
                     </li>
                     {% endfor %}
                 </ul>
@@ -12,8 +12,7 @@
             <div class="logo-text-tel logo-text-tel_margin">
                 <div class="logo-name">
                     <div class="logo__title">
-                        <a class="logo__link" href="/"> ТехСервис Мастер
-                        </a>
+                        <a class="logo__link" href="/">{{ content.siteName|raw }}</a>
                     </div>
                     <p class="logo__subtitle">ремонт бытовой техники в Екатеринбурге</p>
                 </div>
@@ -47,6 +46,12 @@
                     <img class="bullet__img" src="img/bullets/04.jpg" alt="гарантия на наши услуги">
                     <div class="bullet__text">гарантия<br>на наши услуги</div>
                 </div>
+            </div>
+        </div>
+        <!-- modal window -->
+        <div class="substrate screen_off">
+            <div class="modal_phone screen_off">
+                <div class="cross">&#10006;</div>
             </div>
         </div>
     </header>
